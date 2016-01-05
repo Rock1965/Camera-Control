@@ -3,21 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="author" content="Jonathan Brimer">
-	<title>Camera Control</title>
+	<title>Kingdom Hall Camera Control</title>
 
 	<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no" />
 
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/style.css"></head>
-
 <body>
 
 	<div class="main">
 		<div class="row">
 			<div class="">
-				<header class="primary">
-					<h1>Camera Control</h1>
-				</header>				<nav class="primary">
+				<header class="primary"></header>
+				<nav class="primary">
 					<ul>
 						<li>
 							<a class="" href="#" data-toggle="modal" data-target="#set_presets">Assign Presets</a>
@@ -32,21 +30,20 @@
 
 					<fieldset class="presets">
 						<div class="row">
-							<a class="call_preset preset_button preset-1" data-preset="1" href="#preset-1">1</a>
-							<a class="call_preset preset_button preset-2" data-preset="2" href="#preset-2">2</a>
-							<a class="call_preset preset_button preset-3" data-preset="3" href="#preset-3">3</a>
+							<a class="call_preset preset_image preset-1" data-preset="1" href="#preset-1"></a>
+							<a class="call_preset preset_image preset-2" data-preset="2" href="#preset-2"></a>
+							<a class="call_preset preset_image preset-3" data-preset="3" href="#preset-3"></a>
 						</div>
 						<div class="row">
-							<a class="call_preset preset_button preset-4" data-preset="4" href="#preset-4">4</a>
-							<a class="call_preset preset_button preset-5" data-preset="5" href="#preset-5">5</a>
-							<a class="call_preset preset_button preset-6" data-preset="6" href="#preset-6">6</a>
+							<a class="call_preset preset_image preset-4" data-preset="4" href="#preset-4"></a>
+							<a class="call_preset preset_image preset-5" data-preset="5" href="#preset-5"></a>
+							<a class="call_preset preset_image preset-6" data-preset="6" href="#preset-6"></a>
 						</div>
 						<div class="row">
-							<a class="call_preset preset_button preset-7" data-preset="7" href="#preset-7">7</a>
-							<a class="call_preset preset_button preset-8" data-preset="8" href="#preset-8">8</a>
-							<a class="call_preset preset_button preset-9" data-preset="9" href="#preset-9">9</a>
+							<a class="call_preset preset_image preset-7" data-preset="7" href="#preset-7"></a>
+							<a class="call_preset preset_image preset-8" data-preset="8" href="#preset-8"></a>
 						</div>
-						<div class="row">
+						<div class="row padded">
 							<a href="#" class="autopan"></a>
 						</div>
 					</fieldset>
@@ -99,11 +96,6 @@
 		</div>
 	</div>
 
-
-
-
-
-
 	<!-- Modal -->
 	<div class="modal" id="set_presets" tabindex="-1" role="dialog" aria-labelledby="set_presets_label">
 		<div class="modal-dialog" role="document">
@@ -117,6 +109,14 @@
 				<div class="modal-body">
 					<div class="row">
 						<div class="col-xs-12">
+							<div class="alert alert-info" role="alert">
+								<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+								As soon as you click a preset it is set in the camera.
+							</div>
+							<div class="alert alert-warning" role="alert">
+								<span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+								Please only change these settings if you have permission to.
+							</div>
 							<ol>
 								<li>Move the camera into the position you want</li>
 								<li>Click the preset button you want to assign</li>
@@ -193,7 +193,6 @@
 					<h4 class="modal-title" id="cam_adjust_control_settings_label">Preferences</h4>
 				</div>
 				<div class="modal-body">
-
 
 					<div class="row">
 						<div class="col-xs-6">
@@ -274,6 +273,7 @@
 							</select>
 						</div>
 					</div>
+
 					<div class="row">
 						<div class="col-xs-6">
 							<label>Tilt Speed</label>
@@ -309,6 +309,7 @@
 							</select>
 						</div>
 					</div>
+
 					<div class="row">
 						<div class="col-xs-6">
 							<label>Auto Pan Interval</label>
@@ -344,15 +345,56 @@
 	</div>
 
 <div id="preload-images">
-   <img src="./images/preset-button-autopan-active.png" width="1" height="1" alt="" />
-   <img src="./images/pantilt-up-active.png" width="1" height="1" alt="" />
-   <img src="./images/pantilt-down-active.png" width="1" height="1" alt="" />
-   <img src="./images/pantilt-left-active.png" width="1" height="1" alt="" />
-   <img src="./images/pantilt-right-active.png" width="1" height="1" alt="" />
-   <img src="./images/pantilt-home-active.png" width="1" height="1" alt="" />
-   <img src="./images/rocker-toggle-rest.png" width="1" height="1" alt="" />
-   <img src="./images/rocker-toggle-up.png" width="1" height="1" alt="" />
-   <img src="./images/rocker-toggle-down.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-autopan.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-autopan-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-reader-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-main-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-table-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-house-left-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-house-right-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-reader_zoom-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-main.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-main_zoom-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-full_stage-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-table.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-reader.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-house-left.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-house-right.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-reader_zoom.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-main_zoom.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-full_stage.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-9-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-8-active.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-7-active.png" width="1" height="1" alt="" />
+	<img src="./images/zoom-in.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-9.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-8.png" width="1" height="1" alt="" />
+	<img src="./images/preset-button-7.png" width="1" height="1" alt="" />
+	<img src="./images/zoom-out.png" width="1" height="1" alt="" />
+	<img src="./images/rocker-toggle-up.png" width="1" height="1" alt="" />
+	<img src="./images/rocker-toggle-rest.png" width="1" height="1" alt="" />
+	<img src="./images/rocker-toggle-down.png" width="1" height="1" alt="" />
+	<img src="./images/focus-out.png" width="1" height="1" alt="" />
+	<img src="./images/focus-in.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-up-active.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-left-active.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-up.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-right-active.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-home-active.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-down-active.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-right.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-left.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-home.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-down.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-blank-top-right.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-blank-top-left.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-blank-bottom-right.png" width="1" height="1" alt="" />
+	<img src="./images/pantilt-blank-bottom-left.png" width="1" height="1" alt="" />
+	<img src="./images/zoom-toggle-out-rest.png" width="1" height="1" alt="" />
+	<img src="./images/zoom-toggle-in-rest.png" width="1" height="1" alt="" />
+	<img src="./images/focus-toggle-out-rest.png" width="1" height="1" alt="" />
+	<img src="./images/focus-toggle-in-rest.png" width="1" height="1" alt="" />
+	<img src="./images/watchtower-play-icon.png" width="1" height="1" alt="" />
 </div>
 
 </body>
@@ -431,9 +473,7 @@ var template = [
 ];
 
 menu = Menu.buildFromTemplate(template);
-
 Menu.setApplicationMenu(menu);
-
 // only used for electron packaging
 window.$ = window.jQuery = require('./js/jquery-2.1.4.min.js');
 </script>

@@ -23,13 +23,15 @@ var storage = require("./storage");
 app.on('ready', function() {
 
 	var lastWindowState = storage.get("lastWindowState");
+	// var lastWindowState = null;
 
 	if (lastWindowState === null) {
 		lastWindowState = {
 			width: 400,
-			height: 640,
-			frame: false,
-			resizable: false
+			height: 680,
+			resizable: false,
+			titleBarStyle: 'hidden-inset',
+			fullscreen: false
 		}
 	}
 
@@ -38,8 +40,9 @@ app.on('ready', function() {
 		y: lastWindowState.y,
 		width: lastWindowState.width,
 		height: lastWindowState.height,
-		frame: false,
-		resizable: false
+		resizable: false,
+		titleBarStyle: 'hidden-inset',
+		fullscreen: false
 	});
 
 	// and load the index.html of the app.
@@ -52,8 +55,9 @@ app.on('ready', function() {
 			y: bounds.y,
 			width: bounds.width,
 			height: bounds.height,
-			frame: false,
-			resizable: false
+			resizable: false,
+			titleBarStyle: 'hidden-inset',
+			fullscreen: false
 		});
 	});
 });

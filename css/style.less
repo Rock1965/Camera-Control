@@ -11,7 +11,7 @@ body {
 	overflow: hidden;
 }
 
-#preloaded-images {
+#preload-images {
 	position: absolute;
 	overflow: hidden;
 	left: -9999px;
@@ -25,12 +25,14 @@ body {
 }
 
 header.primary {
-	background-color: @color-primary;
+	background-color: #5d5479;
+	background-image: url("./../images/kh-camera-control-logo.png");
 	background-repeat: no-repeat;
-	background-position: 15px center;
-	padding: 15px 15px 15px 20px;
-	text-align: center;
+	background-position: center center;
 	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	height: 40px;
 
 	-webkit-user-select: none;
 	-webkit-app-region: drag;
@@ -58,9 +60,9 @@ nav.primary {
 
 	ul {
 		list-style: none;
-		float: none;
+		float: right;
 		clear: both;
-		margin: 0 auto;
+		margin: 0;
 		padding: 0;
 
 		li {
@@ -70,18 +72,17 @@ nav.primary {
 			clear: none;
 			margin: 0;
 			padding: 0;
-			width: 50%;
 
 			a {
-				font-size: 12px;
+				font-size: 10px;
 				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 				color: #666666;
 				text-transform: uppercase;
-				line-height: 40px;
+				line-height: 20px;
 				text-align: center;
-				padding: 0;
+				padding: 0 10px;
 				display: block;
-				height: 40px;
+				height: 20px;
 				width: 100%;
 				text-decoration: none;
 				outline: none;
@@ -118,7 +119,7 @@ nav.primary {
 	margin: 0;
 
 	&.padded {
-		margin: 10px 0;
+		margin: 10px 0 0;
 	}
 }
 
@@ -198,68 +199,83 @@ legend {
 	}
 }
 
+.preset_image {
+	display: inline-block;
+	width: 114px;
+	height: 93px;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
 .preset(@image: "") {
 	background: no-repeat url(@image);
 }
 
-.preset_button {
-	display: inline-block;
-	width: 112px;
-	height: 40px;
-	float: left;
-	margin: 1px;
-	padding: 0;
+.preset-1 {
+	.preset("./../images/preset-button-main.png");
 
-	font-size: 14px;
-	color: #999999;
-	text-transform: uppercase;
-	line-height: 40px;
-	text-align: center;
-	text-decoration: none;
-
-	background: #333333;
-	background-image: url("./../images/preset-blank.png");
-
-	&:focus {
-		font-size: 14px;
-		color: #666666;
-		font-weight: normal;
-		text-decoration: none;
-	}
-
-	&:hover,
-	&:active,
 	&.active {
-		font-size: 14px;
-		color: #7ec9ed;
-		font-weight: bold;
-		text-decoration: none;
-
-		background: #282828;
-		background-image: url("./../images/preset-blank-active.png");
+		.preset("./../images/preset-button-main-active.png");
 	}
 }
+.preset-2 {
+	.preset("./../images/preset-button-reader.png");
 
-.preset-1 {
-	border-radius: 5px 0 0 0;
+	&.active {
+		.preset("./../images/preset-button-reader-active.png");
+	}
 }
 .preset-3 {
-	border-radius: 0 5px 0 0;
+	.preset("./../images/preset-button-table.png");
+
+	&.active {
+		.preset("./../images/preset-button-table-active.png");
+	}
+}
+.preset-4 {
+	.preset("./../images/preset-button-main_zoom.png");
+
+	&.active {
+		.preset("./../images/preset-button-main_zoom-active.png");
+	}
+}
+.preset-5 {
+	.preset("./../images/preset-button-full_stage.png");
+
+	&.active {
+		.preset("./../images/preset-button-full_stage-active.png");
+	}
+}
+.preset-6 {
+	.preset("./../images/preset-button-media.png");
+
+	&.active {
+		.preset("./../images/preset-button-media-active.png");
+	}
 }
 .preset-7 {
-	border-radius: 0 0 0 5px;
-}
-.preset-9 {
-	border-radius: 0 0 5px 0;
-}
+	.preset("./../images/preset-button-house-left.png");
+	width: 171px;
 
+	&.active {
+		.preset("./../images/preset-button-house-left-active.png");
+	}
+}
+.preset-8 {
+	.preset("./../images/preset-button-house-right.png");
+	width: 171px;
+
+	&.active {
+		.preset("./../images/preset-button-house-right-active.png");
+	}
+}
 .autopan {
 	.preset("./../images/preset-button-autopan.png");
 	display: inline-block;
 	width: 100%;
 	height: 40px;
 	float: left;
-	margin: 10px 0 0;
+	margin: 0;
 	padding: 0;
 
 	&.active {

@@ -736,3 +736,9 @@ Mousetrap.bind('right', function(e) {
 	$('.pantilt-right').removeClass('active');
 	return false;
 }, 'keyup');
+
+
+const app = require('electron').app;
+app.on('window-all-closed', function() {
+	cam_pantilt(1, "ptzstop");
+});
