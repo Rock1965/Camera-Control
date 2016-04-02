@@ -25,10 +25,12 @@ app.on('ready', function() {
 	var lastWindowState = storage.get("lastWindowState");
 	// var lastWindowState = null;
 
+	var defaultHeight = 430;
+
 	if (lastWindowState === null) {
 		lastWindowState = {
 			width: 400,
-			height: 680,
+			height: defaultHeight,
 			resizable: false,
 			titleBarStyle: 'hidden-inset',
 			fullscreen: false
@@ -39,7 +41,7 @@ app.on('ready', function() {
 		x: lastWindowState.x,
 		y: lastWindowState.y,
 		width: lastWindowState.width,
-		height: lastWindowState.height,
+		height: defaultHeight, // lastWindowState.height,
 		resizable: false,
 		titleBarStyle: 'hidden-inset',
 		fullscreen: false
@@ -47,6 +49,10 @@ app.on('ready', function() {
 
 	// and load the index.html of the app.
 	mainWindow.loadURL('file://' + __dirname + '/index.html');
+
+	// Menu.setApplicationMenu(menu);
+
+	// mainWindow.openDevTools();
 
 	mainWindow.on('close', function() {
 		var bounds = mainWindow.getBounds();
